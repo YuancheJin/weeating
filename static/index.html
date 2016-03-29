@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi = medium-dpi">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>WeEating</title>
+    <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />-->
+    <link rel="stylesheet" href="dist/style/weui.css"/>
+    <link rel="stylesheet" href="dist/style/jquery.countdown.css" />
+    <!--<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet prefetch" href="dist/style/csshake.min.css"/>
+    <link rel="stylesheet" href="dist/style/index.css"/>
+</head>
+<body ontouchstart>
+    <div class="container js_container">
+
+    </div>
+    <script type="text/html" id="tpl_home">
+        <div class="page">
+            <!--BEGIN toast-->
+            <div id="toast" style="display: none;">
+                <div class="weui_mask_transparent"></div>
+                <div class="weui_toast">
+                    <i class="weui_icon_toast"></i>
+                    <p class="weui_toast_content">已提交</p>
+                </div>
+            </div>
+            <!--end toast-->
+
+            <!-- loading toast -->
+            <div id="loadingToast" class="weui_loading_toast" style="display:none;">
+                <div class="weui_mask_transparent"></div>
+                <div class="weui_toast">
+                    <div class="weui_loading">
+                        <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+                        <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+                        <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+                        <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+                        <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+                        <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+                        <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+                        <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+                        <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+                        <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+                        <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+                        <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+                    </div>
+                    <p class="weui_toast_content">数据加载中</p>
+                </div>
+            </div>
+            <div id="snowzone"></div>
+            <div class="weui_msg">
+                <div class="weui_icon_area">
+                    <img id="orderImg" src="dist/img/plate.png">
+                </div>
+                <div class="weui_icon_area"><div id="countdown"></div></div>
+                <div class="weui_text_area">
+                    <h2 class="weui_msg_title">订(jia)餐(ban)</h2>
+                    <div class='clock'>
+                        <div class='s shake shake-slow'></div>
+                    </div>
+                </div>
+                <div class="weui_opr_area">
+                    <div class="button_sp_area">
+                        <a href="javascript:;" class="weui_btn weui_btn_plain_primary" id="click_sure">确认</a>
+                    </div>
+                </div>
+                <div class="weui_extra_area">
+                    <a href="javascript:;" class=" js_grid" data-id="article">
+                        使用说明
+                    </a>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="tpl_article">
+        <div class="page">
+            <div class="hd">
+                <h1 class="page_title" style="font-weight: bold">使用说明</h1>
+            </div>
+            <div class="bd">
+                <article class="weui_article">
+                    <section style="text-align: center;">
+                        <section>
+                            <p style="font-weight: bold">点餐时间</p>
+                            <p style="color: red">
+                                每日 13:01 到 16:00
+                            </p>
+                        </section>
+                        <section>
+                            <p style="font-weight: bold">结算时间</p>
+                            <p style="color: red;">
+                                每日 16:01 到 18:00
+                            </p>
+                        </section>
+                        <section>
+                            <p style="font-weight: bold">其他</p>
+                            <p style="color: red;">
+                                当日 18:01 到 次日 13:00 不提供服务; 非工作日点餐无效
+                            </p>
+                        </section>
+                        <section>
+                            <p style="font-weight: bold">...</p>
+                        </section>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </script>
+
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="dist/js/index.js"></script>
+<script src="dist/js/jquery.countdown.js"></script>
+</body>
+</html>
